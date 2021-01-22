@@ -35,3 +35,12 @@ const changeColors = (colors) => {
 checkbox.addEventListener("change", ({target}) => {
     target.checked ? changeColors(darkMode) : changeColors(initialColors)
 })
+
+document.addEventListener('play', (e) => {
+    const audios = document.getElementsByTagName('audio');
+    audios,forEach(audio=>{
+        if(audio != e.target) {
+            audio.pause();
+        }
+    })
+}, true);
